@@ -14,7 +14,7 @@ Stage 2: Beta Modeling & Risk Factor Construction (FF Factors, Beta Estimation)
 Stage 3: Alpha Factor Construction & Neutralization (Formula 2)
     ↓
 Stage 4: Fama-MacBeth Hypothesis Testing (Final Alpha Validation)
-
+```
 
 ## Installation
 
@@ -30,7 +30,7 @@ source venv/bin/activate        # Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 ```
-```
+
 
 ## Quick Start
 
