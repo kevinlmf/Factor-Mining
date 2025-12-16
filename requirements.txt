@@ -1,0 +1,41 @@
+# Factor Mining Framework Dependencies
+# =====================================
+
+# Core Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.11.0
+
+# Statistical Analysis
+statsmodels>=0.14.0
+linearmodels>=5.3  # For Fama-MacBeth regression
+
+# Machine Learning (Optional for factor mining)
+scikit-learn>=1.3.0
+
+# NLP/Sentiment Analysis
+# transformers>=4.30.0  # Uncomment if using deep learning NLP
+# torch>=2.0.0          # Uncomment if using PyTorch
+textblob>=0.17.1
+jieba>=0.42.1  # Chinese text processing
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# Data Sources (Optional)
+# tushare>=1.2.89      # Chinese A-share data
+# akshare>=1.10.0      # Alternative data source
+yfinance>=0.2.28      # Yahoo Finance data
+
+# Configuration
+pyyaml>=6.0
+
+# Progress Bar
+tqdm>=4.65.0
+
+# Jupyter Support
+jupyter>=1.0.0
+ipykernel>=6.25.0
+

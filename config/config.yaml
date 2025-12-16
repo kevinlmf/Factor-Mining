@@ -1,0 +1,77 @@
+# Factor Mining Framework Configuration
+# ======================================
+
+# Data Settings
+data:
+  start_date: "2018-01-01"
+  end_date: "2024-12-31"
+  frequency: "daily"  # daily, weekly, monthly
+  universe: "A_share"  # A_share, US_stock, etc.
+  
+# Factor Settings
+factors:
+  # NLP/Sentiment Factors
+  nlp:
+    enabled: true
+    sources:
+      - news
+      - social_media
+      - analyst_reports
+    
+  # Microstructure Factors  
+  microstructure:
+    enabled: true
+    indicators:
+      - volume
+      - turnover
+      - liquidity
+      - bid_ask_spread
+      - amihud_illiquidity
+      
+  # Fundamental Factors
+  fundamental:
+    enabled: true
+    indicators:
+      - book_to_market
+      - earnings_yield
+      - roe
+      - asset_growth
+      - accruals
+
+# Beta Model (Risk Factors)
+beta_model:
+  factors:
+    - MKT   # Market factor
+    - SMB   # Size factor
+    - HML   # Value factor
+    - MOM   # Momentum factor
+    - RMW   # Profitability factor (optional)
+    - CMA   # Investment factor (optional)
+  lookback_window: 252  # days for beta estimation
+
+# IC Analysis Settings
+ic_analysis:
+  method: "rank"  # rank (Spearman) or pearson
+  lag: 1  # forward return lag in periods
+  min_ic_mean: 0.02  # minimum IC mean threshold
+  min_ir: 0.3  # minimum IR (IC/std(IC)) threshold
+
+# Portfolio Construction
+portfolio:
+  n_groups: 5  # number of quantile groups
+  long_short: true
+  rebalance_frequency: "monthly"
+  weight_method: "equal"  # equal, value, risk_parity
+
+# Fama-MacBeth Settings
+fama_macbeth:
+  newey_west_lags: 6  # lags for Newey-West t-stat adjustment
+  significance_level: 0.05
+  min_stocks_per_period: 30
+
+# Output Settings
+output:
+  save_results: true
+  output_dir: "results"
+  plot_style: "seaborn"
+
