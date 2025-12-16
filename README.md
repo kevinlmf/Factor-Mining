@@ -15,12 +15,13 @@ Stage 3: Alpha Factor Construction & Neutralization (Formula 2)
     ↓
 Stage 4: Fama-MacBeth Hypothesis Testing (Final Alpha Validation)
 
+
 ## Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/kevinlmf/Blossom
-cd Blossom
+git clone https://github.com/kevinlmf/Factor-Mining
+cd Factor-Mining
 
 # Create and activate virtual environment
 python -m venv venv
